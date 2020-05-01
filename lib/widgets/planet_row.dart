@@ -1,24 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:planets/models/Planet.dart';
+import 'package:planets/pages/details_page.dart';
+import 'package:planets/utils/styles.dart';
 
 class PlanetRow extends StatelessWidget {
   final Planet planet;
-
-  final TextStyle headerTextStyle = TextStyle(
-    color: Colors.white,
-    fontSize: 18.0,
-    fontWeight: FontWeight.w600
-  );
-
-  final TextStyle regularTextStyle = TextStyle(
-    color: const Color(0xffb6b2df),
-    fontSize: 9.0,
-    fontWeight: FontWeight.w400
-  );
-
-  final TextStyle subHeaderTextStyle = TextStyle(
-    fontSize: 12.0
-  );
 
   PlanetRow(this.planet);
 
@@ -29,10 +15,13 @@ class PlanetRow extends StatelessWidget {
         vertical: 16.0
       ),
       alignment: FractionalOffset.centerLeft,
-      child: Image(
-        image: AssetImage(planet.image),
-        height: 92.0,
-        width: 92.0,
+      child: Hero(
+        tag: "planet-hero-${planet.id}",
+        child: Image(
+          image: AssetImage(planet.image),
+          height: 92.0,
+          width: 92.0,
+        ),
       ),
     );
 
@@ -43,10 +32,10 @@ class PlanetRow extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Container(height: 4.0),
-          Text(planet.name, style: headerTextStyle),
+          Text(planet.name, style: Styles.headerTextStyle),
 
           Container(height: 10.0),
-          Text(planet.location, style: regularTextStyle),
+          Text(planet.location, style: Styles.regularTextStyle),
 
           Container(
             margin: new EdgeInsets.symmetric(vertical: 8.0),
@@ -96,16 +85,21 @@ class PlanetRow extends StatelessWidget {
       ),
     );
 
-    return Container(
-      margin: const EdgeInsets.symmetric(
-        vertical: 16.0,
-        horizontal: 16.0,
-      ),
-      child: Stack(
-        children: <Widget>[
-          card,
-          thumbnail,
-        ],
+    return GestureDetector(
+      onTap: () => Navigator.of(context).push(new PageRouteBuilder(
+        pageBuilder: (_, __, ___) => DetailsPage(planet),
+      )),
+      child: Container(
+        margin: const EdgeInsets.symmetric(
+          vertical: 16.0,
+          horizontal: 16.0,
+        ),
+        child: Stack(
+          children: <Widget>[
+            card,
+            thumbnail,
+          ],
+        ),
       ),
     );
   }
@@ -115,7 +109,7 @@ class PlanetRow extends StatelessWidget {
       children: <Widget>[
         Image.asset(image, height: 12.0),
         Container(width: 8.0),
-        Text(value, style: regularTextStyle),
+        Text(value, style: Styles.regularTextStyle),
       ]
     );
   }

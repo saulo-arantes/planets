@@ -9,11 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Planets',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        fontFamily: "Poppins"
+        fontFamily: 'Poppins'
       ),
       home: MyHomePage(),
     );
@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          GradientAppBar("Planets"),
+          GradientAppBar('Planets'),
 
           HomePageBody(),
         ],
