@@ -31,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          GradientAppBar('Planets'),
+          GradientAppBar('Sistema Solar'),
 
           HomePageBody(),
         ],
