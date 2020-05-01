@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:planets/widgets/gradient_app_bar.dart';
+import 'package:planets/widgets/home_page_body.dart';
 
 void main() => runApp(MyApp());
 
@@ -34,7 +35,12 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Column(
         children: <Widget>[
-          GradientAppBar("Planets")
+          GradientAppBar("Planets"),
+
+          HomePageBody(),
+          HomePageBody(),
+          HomePageBody(),
+          HomePageBody(),
         ],
       )
     );
