@@ -22,6 +22,16 @@ class Planet {
 
 List<Planet> planets = [
   const Planet(
+    id: '0',
+    name: 'Sol',
+    location: 'Via Láctea',
+    distance: '149,6m Km',
+    gravity: '274 m/s²',
+    description: 'O Sol é a estrela central do Sistema Solar. Todos os outros corpos do Sistema Solar, como planetas, planetas anões, asteroides, cometas e poeira, bem como todos os satélites associados a estes corpos, giram ao seu redor. Responsável por 99,86% da massa do Sistema Solar, o Sol possui uma massa 332 900 vezes maior que a da Terra, e um volume 1 300 000 vezes maior que o do nosso planeta. A distância da Terra ao Sol é cerca de 150 milhões de quilômetros ou 1 unidade astronômica (UA). Esta distância varia com o ano de um mínimo de 147,1 milhões de quilômetros (0,9833 UA) no perélio (ou periélio) a um máximo de 152,1 milhões de quilômetros (1,017 UA) no afélio, em torno de 4 de julho. A luz solar demora aproximadamente 8 minutos e 18 segundos para chegar à Terra. Energia do Sol na forma de luz solar é armazenada em glicose por organismos vivos através da fotossíntese, processo do qual, direta ou indiretamente, dependem todos os seres vivos que habitam nosso planeta. A energia solar também é responsável pelos fenômenos meteorológicos e o clima na Terra.',
+    image: 'assets/img/sun.png',
+    picture: 'assets/img/sun-image.jpg'
+  ),
+  const Planet(
     id: '1',
     name: 'Mercúrio',
     location: 'Via Láctea',
