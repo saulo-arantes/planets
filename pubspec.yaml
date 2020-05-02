@@ -64,6 +64,7 @@ flutter:
    - assets/img/saturn-image.jpg
    - assets/img/uranus-image.jpeg
    - assets/img/sun-image.jpg
+   - assets/img/meteorite.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

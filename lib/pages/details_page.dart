@@ -19,7 +19,24 @@ class DetailsPage extends StatelessWidget {
           children: <Widget>[
             _getBackground(),
             _getGradient(),
-            _getContent()
+            Opacity(
+              opacity: 0.2,
+              child: Container(
+                height: 92.0,
+                margin: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.85,
+                  right: MediaQuery.of(context).size.width * 0.05
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: <Widget>[
+                    Image.asset('assets/img/meteorite.png')
+                  ],
+                )
+              ),
+            ),
+            _getContent(),
           ],
         ),
       )
