@@ -53,6 +53,15 @@ flutter:
    - assets/img/jupiter.png
    - assets/img/saturn.png
    - assets/img/uranus.png
+   - assets/img/mars-image.jpg
+   - assets/img/earth-image.jpg
+   - assets/img/mercury-image.jpeg
+   - assets/img/moon-image.jpg
+   - assets/img/neptune-image.png
+   - assets/img/venus-image.jpg
+   - assets/img/jupiter-image.jpg
+   - assets/img/saturn-image.jpg
+   - assets/img/uranus-image.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

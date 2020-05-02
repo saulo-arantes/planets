@@ -29,7 +29,7 @@ class DetailsPage extends StatelessWidget {
   Widget _getBackground() {
     return Container(
       constraints: BoxConstraints.expand(height: 300.0),
-      child: Image.network(
+      child: Image.asset(
         planet.picture,
         fit: BoxFit.cover,
         height: 300.0,
