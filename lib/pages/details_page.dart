@@ -19,6 +19,7 @@ class DetailsPage extends StatelessWidget {
           children: <Widget>[
             _getBackground(),
             _getGradient(),
+
             Opacity(
               opacity: 0.2,
               child: Container(
@@ -37,6 +38,7 @@ class DetailsPage extends StatelessWidget {
               ),
             ),
             _getContent(),
+            _backButton(context)
           ],
         ),
       )
@@ -92,6 +94,23 @@ class DetailsPage extends StatelessWidget {
           ),
         )
       ],
+    );
+  }
+
+  Widget _backButton(context) {
+    final double statusBarHeight = MediaQuery.of(context).padding.top;
+    return Container(
+      padding: EdgeInsets.only(top: statusBarHeight),
+      height: statusBarHeight + 66.0,
+      child: IconButton(
+        icon: Icon(
+          Icons.arrow_back,
+          color: Colors.white,
+        ),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+      ),
     );
   }
 }
